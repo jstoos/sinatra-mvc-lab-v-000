@@ -12,10 +12,10 @@ class PigLatinizer
     @text.collect do |word|
       if word[0].match(/[aeiou]/)
         @sentence = @sentence.concat("#{word.concat('way')} ")
-      # else
-        # first_letter = word[0]
-        # word[0] = ""
-        # @sentence.concat("#{word.concat('#{first_letter}ay)'} ")
+      else
+        first_letter = word[0]
+        word[0] = ""
+        @sentence.concat("#{word.concat('#{first_letter}ay)'} ")
       end
     end
     binding.pry

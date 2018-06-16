@@ -12,7 +12,6 @@ class PigLatinizer
     @text.collect do |word|
       if word[0].match(/[aeiouAEIOU]/)
         @sentence = @sentence.concat("#{word.concat('way')} ")
-    
       elsif !word[0].match(/[aeiouAEIOU]/) && !word[1].match(/[aeiouAEIOU]/) && !word[2].match(/[aeiouAEIOU]/)
         first_three_letters_plus_ay = word[0..2].concat("ay")
         word[0..2] = ""

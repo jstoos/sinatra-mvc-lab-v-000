@@ -15,7 +15,7 @@ class PigLatinizer
       else
         first_letter_plus_ay = word[0].concat("ay")
         word[0] = ""
-        @sentence = word.concat(first_letter_plus_ay)
+        @sentence = @sentence.concat("#{word.concat(first_letter_plus_ay)} ")
       end
     end
     binding.pry

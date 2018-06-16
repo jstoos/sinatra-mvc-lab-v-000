@@ -2,12 +2,12 @@ class PigLatinizer
   attr_reader :text, :sentence
 
   @text = []
-  @sentence = ""
 
   def initialize
   end
 
   def piglatinize(text)
+      @sentence = ""
     @text = text.split
     @text.collect do |word|
       if word[0].match(/[aeiou]/)

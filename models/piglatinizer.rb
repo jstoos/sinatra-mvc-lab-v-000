@@ -13,10 +13,9 @@ class PigLatinizer
       if word[0].match(/[aeiou]/)
         @sentence = @sentence.concat("#{word.concat('way')} ")
       else
-        first_letter = word[0]
+        first_letter_plus_ay = word[0].concat("ay")
         word[0] = ""
-        ending = "#{word.concat('#{first_letter}ay ')}"
-        @sentence.concat(ending)
+        @sentence = word.concat(first_letter_plus_ay)
       end
     end
     binding.pry

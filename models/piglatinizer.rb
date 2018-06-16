@@ -18,7 +18,7 @@ class PigLatinizer
         @sentence = @sentence.concat("#{word.concat(first_letter_plus_ay)} ")
       end
     end
-    #binding.pry
+    @sentence
   end
 
 end

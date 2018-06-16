@@ -15,8 +15,7 @@ class PigLatinizer
       else
         first_letter = word[0]
         word[0] = ""
-        ending = first_letter"ay"
-        #{word.concat('#{first_letter}ay) '}
+        ending = "#{word.concat('#{first_letter}ay) '}"
         @sentence.concat(ending)
       end
     end

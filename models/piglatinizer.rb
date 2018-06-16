@@ -7,7 +7,7 @@ class PigLatinizer
   end
 
   def piglatinize(text)
-      @sentence = ""
+    @sentence = ""
     @text = text.split
     @text.collect do |word|
       if word[0].match(/[aeiou]/)
